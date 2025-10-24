@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khyathi Sri | Frontend Developer</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Landing Section */
+    #home {
+      height: 100vh;
+      background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(102,16,242,0.7)), 
+                  url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    #home h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+
+    #home h3 {
+      font-size: 1.6rem;
+      margin-bottom: 25px;
+      color: #f8f9fa;
+    }
+
+    #home p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      color: #e0e0e0;
+    }
+
+    #home button {
+      margin-top: 30px;
+      background: #ffca2c;
+      color: #212529;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    #home button:hover {
+      background-color: #ffc107;
+      transform: scale(1.05);
+    }
+
+    /* Projects Section */
+    #projects {
+      padding: 100px 20px;
+      background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+    }
+
+    #projects h2 {
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #343a40;
+    }
+
+    .project-card {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 25px;
+      transition: 0.4s;
+      height: 100%;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .project-card h5 {
+      color: #007bff;
+      font-weight: 600;
+    }
+
+    .project-card a {
+      color: #6610f2;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Skills Section */
+    #skills {
+      background: url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1600&q=80') center/cover fixed no-repeat;
+      color: white;
+      padding: 100px 20px;
+      position: relative;
+    }
+
+    #skills::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    #skills .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    #skills h2 {
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .skill-badge {
+      background-color: #ffc107;
+      color: #212529;
+      padding: 12px 25px;
+      border-radius: 30px;
+      margin: 5px;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    /* Education & Hobbies */
+    .info-section {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      padding: 30px;
+      color: #212529;
+      margin-top: 30px;
+    }
+
+    .info-section h4 {
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #212529;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      #home h1 {
+        font-size: 2.4rem;
+      }
+      #home h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Landing Section -->
+  <section id="home" data-aos="fade-up">
+    <h1><strong>Khyathi Sri</strong></h1>
+    <h3>Frontend Developer</h3>
+    <p>
+      Enthusiastic and creative developer with a zeal for transforming designs into dynamic,
+      responsive web interfaces. Passionate about clean code, modern aesthetics, and seamless user experiences.
+    </p>
+    <button onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">View My Work</button>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container">
+    <h2 data-aos="zoom-in">My Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="project-card h-100">
+          <h5><i class="fa-solid fa-gem"></i> Giva Website</h5>
+          <p>A stylish jewelry e-commerce platform built using Html , CSS and Bootstrap.</p>
+          <a href="#">🔗 View Project</a>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="project-card h-100">
+          <h5><i class="fa-solid fa-hospital"></i> Hospital Management System</h5>
+          <p>Responsive web app for managing hospital data, appointments, and staff efficiently.</p>
+          <a href="#">🔗 View Project</a>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card h-100">
+          <h5><i class="fa-solid fa-list-check"></i> To-Do List App</h5>
+          <p>Interactive React-based app to organize daily tasks with a clean UI.</p>
+          <a href="#">🔗 View Project</a>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card h-100">
+          <h5><i class="fa-solid fa-list-check"></i>Weather App</h5>
+          <p>Build using javascript provides information about atmospheric conditions and wind.</p>
+          <a href="#">🔗 View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills, Education, and Hobbies -->
+  <section id="skills">
+    <div class="content container" data-aos="fade-up">
+      <h2>Skills & More</h2>
+      <div class="text-center mb-4">
+        <span class="skill-badge">HTML</span>
+        <span class="skill-badge">CSS</span>
+        <span class="skill-badge">JavaScript</span>
+        <span class="skill-badge">Bootstrap</span>
+        <span class="skill-badge">React</span>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6" data-aos="fade-right">
+          <div class="info-section">
+            <h4>Education</h4>
+            <ul>
+              <li><strong>Bachelor’s Degree in Computer Science</strong> –PRIST University</li>
+              <li>Graduated: 2023</li>
+              <li>CGPA: 7.65</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <div class="info-section">
+            <h4>Hobbies</h4>
+            <ul>
+              <li>Exploring new web technologies</li>
+              <li>Creative digital designing</li>
+              <li>Reading and learning UX trends</li>
+              <li>Art, Music & Photography</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 <strong>Khyathi Sri</strong>. All Rights Reserved.
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  </script>
+</body>
+</html>
